@@ -1,0 +1,151 @@
+/*----Body----*/
+
+ *{
+	box-sizing: border-box;
+}
+
+body{
+	background-color: hsl(257, 40%, 49%);
+	background-image: url(images/bg-desktop.svg);
+	background-repeat: no-repeat;
+	margin-top: clamp(30px, 5vw, 40px);
+	margin-bottom: clamp(30px, 5vw, 40px);
+	margin-right: clamp(20px, 5vw, 70px);
+	margin-left: clamp(20px, 5vw, 70px);
+}
+
+/*----Header----*/
+
+header{
+	margin-bottom: clamp(50px, 5vw, 80px);
+}
+
+#logo{
+	object-fit: contain;
+	height: clamp(30px, 5vw, 55px);
+	width: auto;
+}
+
+/*----Footer----*/
+
+#RS{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 40px;
+	width:  clamp(120px, 10vw + 5rem, 160px);
+	float: right;
+	margin: 20px;
+}
+
+.icon{
+	height: clamp(30px, 5vw + 0.5rem, 40px);
+	width: clamp(30px, 5vw + 0.5rem, 40px);
+}
+
+.icon:hover{
+	filter: invert(34%) sepia(96%) saturate(3455%) hue-rotate(281deg) brightness(97%) contrast(99%);
+}
+
+/*----Main----*/
+
+main{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	color: white;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: minmax(700px 520px);
+	grid-auto-rows: 1fr;
+	grid-template-areas: "#column1 #column2";
+	column-gap: 50px;
+	justify-content: start;
+	align-items: flex-start;
+	margin: 20px;
+}
+
+h1{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	color: white;
+	font-size: clamp(25px, 5vw ,40px);
+	margin: auto;
+}
+
+p{
+	font-size: clamp(15px, 1vw ,18px);
+	line-height: clamp(25px, 1vw ,30px);
+}
+
+a{
+	text-decoration: none;
+	color: hsl(257, 40%, 49%);
+	font-size: clamp(12px, 1vw ,18px);
+}
+	
+
+#column2{
+	max-width: 520px;
+	min-width: 200px;
+}
+
+
+#illustration{
+	object-fit: contain;
+	max-width: 100%;
+	min-width: 180px;
+}
+
+
+#register{
+	background-color: white;
+	width: 160px;
+	height: 40px;
+	border-radius: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 3px 10px 10px 0px hsl(257, 40%, 39%);
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	cursor: pointer;
+}
+
+
+#register:hover {
+	background-color: hsl(300, 69%, 71%);
+}
+
+#register:hover a{
+	display: block;
+	color: white;
+}
+
+
+/*----Responsive----*/
+
+@media screen and (max-width: 650px){
+	main{
+		grid-template-columns: repeat(1, 1fr);
+	
+	}
+
+	footer{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	#column2{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	h1, p{
+		text-align: center;
+	}	
+}
+
+
